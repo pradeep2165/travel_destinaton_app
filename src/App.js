@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { CssBaseline, Grid } from '@mui/material'
+import Header from './components/Header'
+import List from './components/LIst/List'
+import Map from './components/Map/Map'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+   <CssBaseline />   
+   <Header/>
+   <Grid container spacing={3} style={{width:'100%'}}>
+    <Grid item sx={12} md={4}>
+      <List/>
+    </Grid>
+    <Grid item sx={12} md={8} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <Map/>      
+    </Grid>
+   </Grid>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

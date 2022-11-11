@@ -16,26 +16,25 @@ const List = ({ type, setType, rating, setRating, isLoading, childClicked, place
 
   return (
     <div style={{ padding: "25px" }}>
-      <Typography variant="h4">Food & Dining around you</Typography>
+      <Typography variant="h5">Food & Dining around you</Typography>
       {isLoading ? (
         <div style={{ height: "600px", display: "flex", justifyContent: "center", alignItems: "center" }}>
           <CircularProgress size="5rem" />
         </div>
       ) : (
         <>
-          <FormControl style={{ minWidth: 120, marginBottom: "30px" }}>
-            <InputLabel id="type">Type</InputLabel>
-            <Select id="type" value={type} onChange={(e) => setType(e.target.value)}>
+          <FormControl style={{ minWidth: 120, marginBottom: "30px", spacing: 2 }}>
+            
+          <Select id="type" value={type} onChange={(e) => setType(e.target.value)} >
               <MenuItem value="restaurants">Restaurants</MenuItem>
               <MenuItem value="hotels">Hotels</MenuItem>
               <MenuItem value="attractions">Attractions</MenuItem>
             </Select>
+          {/* </div> */}
           </FormControl>
-          <FormControl style={{ minWidth: 120, marginBottom: "30px" }}>
-            <InputLabel id="rating" value={rating} onChange={(e) => setRating(e.target.value)}>
-              Rating
-            </InputLabel>
-            <Select id="rating">
+          <FormControl style={{ minWidth: 120, marginBottom: "30px", spacing:1 }}>
+            
+            <Select id="rating" value={rating} onChange={(e) => setRating(e.target.value)}>
               <MenuItem value="">All</MenuItem>
               <MenuItem value="3">Above 3.0</MenuItem>
               <MenuItem value="4">Above 4.0</MenuItem>

@@ -36,15 +36,15 @@ const PlacesDetails = ({ place, selected, refProp}) => {
           </Box>
         ))}
         {place?.cuisine?.map(({ name }) => (
-          <Chip key={name} size="small" label={name} />
+          <Chip key={name} size="small" label={name} style={{margin: '5px 5px 5px 0'}}/>
         ))}
         {place.address && (
-          <Typography gutterBottom variant="body2" color="textSecondary" >
+          <Typography gutterBottom variant="body2" color="textSecondary" style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '10px'}}>
             <LocationOnIcon />{place.address}
           </Typography>
         )}
         {place.phone && (
-          <Typography variant="body2" color="textSecondary">
+          <Typography variant="body2" color="textSecondary" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
             <PhoneIcon /> {place.phone}
           </Typography>
         )}  

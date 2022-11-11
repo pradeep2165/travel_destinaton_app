@@ -11,7 +11,7 @@ const App = () => {
   const [childClicked, setChildClicked] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [filteredPlaces, setFilteredPlaces] = useState([]);
-  const [rating, setRating] = useState("");
+  const [rating, setRating] = useState("All");
   const [places, setPlaces] = useState([]);
   const [bounds, setBounds] = useState(null);
 
@@ -41,7 +41,7 @@ const App = () => {
         setIsLoading(false);
       });
     }
-  }, [type]);
+  }, [type, bounds]);
 
   return (
     <div>

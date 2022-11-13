@@ -1,11 +1,10 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
-import {LocationOnOutlinedIcon} from '@material-ui/icons/LocalActivityOutlined';
 import { Paper, Typography, useMediaQuery } from "@mui/material";
 import Rating from '@material-ui/lab/Rating';
 
 const Map = ({coords, places, setCoords, setBounds, setChildClicked}) => {
-  console.log(coords, places);
+  
   const matches = useMediaQuery('(min-width:600px)');
   return (
     

@@ -6,8 +6,8 @@ import Rating from '@material-ui/lab/Rating';
 const PlacesDetails = ({ place, selected, refProp}) => {
     if (selected) refProp?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   return (
-    <Card>
-        <CardMedia style={{ height: 350 }}
+    <>
+        <CardMedia style={{ height: 350}} 
         image={place.photo ? place.photo.images.large.url : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'}
         title={place.name}/>
     
@@ -58,7 +58,7 @@ const PlacesDetails = ({ place, selected, refProp}) => {
         </Button>
       </CardActions>      
       
-    </Card>
+    </>
   )
 }
 

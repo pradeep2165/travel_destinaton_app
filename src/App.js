@@ -11,7 +11,7 @@ const App = () => {
   const [childClicked, setChildClicked] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [filteredPlaces, setFilteredPlaces] = useState([]);
-  const [rating, setRating] = useState("All");
+  const [rating, setRating] = useState("");
   const [places, setPlaces] = useState([]);
   const [bounds, setBounds] = useState(null);
 
@@ -45,9 +45,9 @@ const App = () => {
 
   return (
     <div>
-      <CssBaseline />
+      <CssBaseline/>
       <Header />
-      <Grid container spacing={3} style={{ width: "100%" }}>
+      <Grid container spacing={3} sx={{ width: "100%", margin: "auto", padding:"25px" }}>
         <Grid item xs={12} md={4}>
           <List isLoading={isLoading} childClicked={childClicked} places={filteredPlaces.length ? filteredPlaces : places} type={type} setType={setType} rating={rating} setRating={setRating} />
         </Grid>
